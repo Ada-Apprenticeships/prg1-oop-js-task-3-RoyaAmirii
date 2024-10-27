@@ -56,8 +56,12 @@ class ToDo {
 }
 
 add(task){
+  if (task instanceof Task) {
   this.tasks.push(task);
   return this.tasks.length;
+  } else {
+    throw new Error ('Invalid Task instance');
+  }
 }
 remove(title){
   const taskIndex = this.tasks.findIndex(task => task.title === title);
