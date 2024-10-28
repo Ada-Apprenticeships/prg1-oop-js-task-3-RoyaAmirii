@@ -27,27 +27,27 @@ function todaysDate () {
 
 
 class Task  {
-  #title; // Private attribute
-  #priority; // Private attribute
-  #added; // Private attribute
+  _title; // removed the # to change private attribute to public
+  _priority; //  removed the # to change private attribute to public
+  _added; //  removed the # to change private attribute to public
 
   constructor(title, priority) {
-    this.#title = title;
-    this.#priority = validatePriority(priority);
-    this.#added = todaysDate();
+    this._title = title;
+    this._priority = validatePriority(priority);
+    this._added = todaysDate();
   }
     get title() {
-      return this.#title;
+      return this._title;
 }
 get priority () {
-  return this.#priority;
+  return this._priority;
 }
 set priority (newPriority) {
-  this.#priority = validatePriority(newPriority);
+  this._priority = validatePriority(newPriority);
 }
 
 get added() {
-  return this.#added;
+  return this._added;
 }
 }
 class ToDo {
@@ -85,11 +85,6 @@ task(title) {
   return task;
 }
 }
-//Testing validInteger function
-console.log(validInteger(5)); 
-console.log(validInteger(-1));
-console.log(validInteger('10'));
-console.log(validInteger('abc'))
 
 // Leave this code here for the automated tests
 module.exports = {
