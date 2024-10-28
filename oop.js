@@ -2,7 +2,7 @@ PRIORITY = { "LOW": 1, "MEDIUM": 3, "HIGH": 5, "URGENT": 7 };
 
 
 function validInteger (value) { // value can be a string or a number (integer)
-  return Number.isInteger(Number(value)) && Number (value) > 0;
+  return Number.isInteger(parseInt(value)) && String(parseInt (value)) === String (value) && Number(value) >= 0;
 }  
 
 
@@ -66,7 +66,7 @@ add(task){
 remove(title){
   const taskIndex = this.tasks.findIndex(task => task.title === title);
   if (taskIndex !== -1){
-    this.task.splice(taskIndex, 1);
+    this.tasks.splice(taskIndex, 1);
     return true;
   }
   return false;
@@ -85,6 +85,11 @@ task(title) {
   return task;
 }
 }
+//Testing validInteger function
+console.log(validInteger(5)); 
+console.log(validInteger(-1));
+console.log(validInteger('10'));
+console.log(validInteger('abc'))
 
 // Leave this code here for the automated tests
 module.exports = {
