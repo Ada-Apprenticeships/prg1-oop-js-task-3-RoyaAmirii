@@ -4,7 +4,7 @@
 
 ## You are required to:  
  
-* Create a minimum viable product (MVP) TaskList App  - the system will be object-oriented with two classes (```TaskList``` and ```TaskList```).  The ```TaskList``` class will provide simple storage, management (i.e., add, remove, list and access any specific ```TaskList```). This will be a _1-to-many_ relationship (one ```TaskList``` instance supports many ```TaskList``` instances). 
+* Create a minimum viable product (MVP) TaskList App  - the system will be object-oriented with two classes (```Task``` and ```Todo```).  The ```Task``` class will provide simple storage, management (i.e., add, remove, list and access any specific ```Todo```). This will be a _1-to-many_ relationship (one ```Task``` instance supports many ```Todo``` instances). 
 
 ![spacer](images/spacer8x8.png)
 
@@ -23,7 +23,7 @@
 
 ## Creating the Classes
 
-* Create the ```TaskList``` Class. The class supports 3 attributes (aka properties) and 1 method (the constructor). Where possible, the attributes should be PRIVATE. When instantiated, the ```TaskList``` class creates a ```TaskList``` object based on arguments passed, the 'added' attributed is automatically assigned as part of the constructor. The class only supports valid priorities. 
+* Create the ```Task``` Class. The class supports 3 attributes (aka properties) and 1 method (the constructor). Where possible, the attributes should be PRIVATE. When instantiated, the ```Task``` class creates a ```Todo``` object based on arguments passed, the 'added' attributed is automatically assigned as part of the constructor. The class only supports valid priorities. 
 
 ![spacer](images/spacer8x8.png)
 
